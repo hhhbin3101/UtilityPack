@@ -73,6 +73,31 @@ def Converter():
 
 #단위 변환기 끝
 
+#기능 2. 간단 계산기
+def calculator():
+    num1 = float(input("첫 번째 숫자 입력 : "))
+    op = input("연산자(+, -, *, /) 입력 : ")
+    num2 = float(input("두 번째 숫자 입력 : "))
+
+    if op == '+':
+        print(f"{num1} + {num2} = {num1 + num2}")
+
+    elif op == '-':
+        print(f"{num1} - {num2} = {num1 - num2}")
+
+    elif op == '*':
+        print(f"{num1} * {num2} = {num1 * num2}")
+
+    elif op == '/':
+        if num2 == 0:
+            print("0으로는 나눌 수 없습니다.")
+        else:
+            print(f"{num1} / {num2} = {num1 / num2}")
+
+    else:
+        print("연산자를 잘못 입력하였습니다.")
+#간단 계산기 끝
+
 def main():
     """
     프로그램의 메인 메뉴입니다.
@@ -92,7 +117,7 @@ def main():
         if choice == '1':
             Converter()
         elif choice == '2':
-            # 간단 계산기 함수 불러오기 해주세요
+            calculator()
         elif choice == '3':
             average_score()
         elif choice == '4':
