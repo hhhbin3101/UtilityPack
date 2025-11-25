@@ -29,6 +29,50 @@ def average_score():
     else:
         print("계산 오류")
 
+#기능 1. 단위 변환기
+
+class Converter_:
+    @staticmethod
+    def c_m(c):
+        return c / 100
+
+    @staticmethod
+    def m_c(m):
+        return m * 100
+
+    @staticmethod
+    def g_kg(g):
+        return g / 1000
+
+    @staticmethod
+    def kg_g(kg):
+        return kg * 1000
+
+
+def Converter():
+    want_function = input("원하는 기능을 입력하세요: ")
+
+    if want_function == "cm_to_m":
+        c = float(input("cm 값을 입력하세요: "))
+        print(Converter_.c_m(c))
+
+    elif want_function == "m_to_cm":
+        m = float(input("m 값을 입력하세요: "))
+        print(Converter_.m_c(m))
+
+    elif want_function == "g_to_kg":
+        g = float(input("g 값을 입력하세요: "))
+        print(Converter_.g_kg(g))
+
+    elif want_function == "kg_to_g":
+        kg = float(input("kg 값을 입력하세요: "))
+        print(Converter_.kg_g(kg))
+
+    else:
+        print("지원하지 않는 기능입니다.")
+
+#단위 변환기 끝
+
 def main():
     """
     프로그램의 메인 메뉴입니다.
@@ -46,7 +90,7 @@ def main():
         choice = input(">")
 
         if choice == '1':
-            # 단위 변환기 함수 불러오기 해주세요
+            Converter()
         elif choice == '2':
             # 간단 계산기 함수 불러오기 해주세요
         elif choice == '3':
