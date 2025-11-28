@@ -27,7 +27,7 @@ def average_score():
 
         print(f"평균 : {average:.2f}")
     else:
-        print("계산 오류")
+        print("Error!")
 
 #기능 1. 단위 변환기
 
@@ -98,6 +98,33 @@ def calculator():
         print("연산자를 잘못 입력하였습니다.")
 #간단 계산기 끝
 
+#기능 4. 문자열 처리
+
+def to_upper(text):
+    return text.upper()
+
+def to_lower(text):
+    return text.lower()
+
+def string_menu():
+    print("\n문자열 처리")
+    print("1. 대문자로 변환")
+    print("2. 소문자로 변환")
+
+    cho = input("선택: ")
+
+    if cho == '1':
+        inp = input("대문자로 바꿀 문장을 입력하세요: ")
+        print(f"결과: {to_upper(inp)}")
+
+    elif cho == '2':
+        inp = input("소문자로 바꿀 문장을 입력하세요: ")
+        print(f"결과: {to_lower(inp)}")
+
+    else:
+        print("잘못된 입력입니다.")
+#문자열 처리 끝
+
 def main():
     """
     프로그램의 메인 메뉴입니다.
@@ -121,7 +148,7 @@ def main():
         elif choice == '3':
             average_score()
         elif choice == '4':
-            # 문자열 처리 함수 불러오기 해주세요
+            string_menu()
         elif choice == '5':
             # 비밀번호 생성기 함수 불러오기 해주세요
         elif choice == '0':
