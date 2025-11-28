@@ -27,7 +27,7 @@ def average_score():
 
         print(f"평균 : {average:.2f}")
     else:
-        print("계산 오류")
+        print("Error!")
 
 #기능 1. 단위 변환기
 
