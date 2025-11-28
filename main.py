@@ -1,4 +1,5 @@
 import sys
+import random
 # 각자 사용 모듈 있으면 import 해주세요
 
 # 본인이 만든 기능 함수로 추가해주세요
@@ -125,6 +126,29 @@ def string_menu():
         print("잘못된 입력입니다.")
 #문자열 처리 끝
 
+#랜덤 비밀번호 생성기
+
+def Password():
+    Big_English = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    Small_English = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    Number = ['0','1','2','3','4','5','6','7','8','9']
+    Special_Word = ['!','@','#','$','%','^','&','*','?','.',',','<','>']
+
+    Password = ""
+    for _ in range(3):
+        Password += random.choice(Big_English)
+
+    for _ in range(5):
+        Password += random.choice(Small_English)
+
+    for _ in range(4):
+        Password += random.choice(Number)
+
+    Password += random.choice(Special_Word)
+
+    return Password
+#랜덤 비밀번호 생성기 끝
+
 def main():
     """
     프로그램의 메인 메뉴입니다.
@@ -150,7 +174,7 @@ def main():
         elif choice == '4':
             string_menu()
         elif choice == '5':
-            # 비밀번호 생성기 함수 불러오기 해주세요
+            print(Password())
         elif choice == '0':
             print("프로그램을 종료합니다.")
             break
