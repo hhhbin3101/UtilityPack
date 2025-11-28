@@ -1,4 +1,4 @@
-import sys.
+import sys #충돌
 # 각자 사용 모듈 있으면 import 해주세요
 
 # 본인이 만든 기능 함수로 추가해주세요
